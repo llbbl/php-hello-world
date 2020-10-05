@@ -31,20 +31,6 @@ jobs:
     runs-on: [self-hosted, linux, x64]
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Setup PHP
-        uses: shivammathur/setup-php@master
-        with:
-          php-version: 7.4
-          extension-csv: mbstring, bcmath
-#       - name: Composer install
-#         run: composer install
-      - name: Setup Deployer
-        uses: atymic/deployer-php-action@master
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Deploy to Prod
-#         env:
-#           DOT_ENV: ${{ secrets.DOT_ENV }}
-        run: dep deploy production --tag=${{ env.GITHUB_REF }} -vvv
-         
+        run: dep deploy -vvv
+
