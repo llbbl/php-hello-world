@@ -12,7 +12,7 @@ dump($hello_world);
 
 $hello = new stdClass();
 
-$hello->world = "hello world";
+$hello->world = "Merge PHP ... is this real life? ";
 
 dump($hello);
 
