@@ -11,7 +11,7 @@ set('application', 'php-hello-world');
 set('repository', 'git@github.com:llbbl/php-hello-world.git');
 
 host('php-hello-world')
-    ->hostname('34.218.232.136')
+    ->hostname('1.2.3.4')
     ->user('forge')
     ->port('22')
     ->identityFile('~/.ssh/id_ed25519')
